@@ -1,0 +1,18 @@
+package com.example.nfcapp;
+
+import android.nfc.cardemulation.HostApduService;
+import android.os.Bundle;
+
+public class MyHostApduService extends HostApduService {
+
+    @Override
+    public byte[] processCommandApdu(byte[] commandApdu, Bundle extras) {
+        // Process the APDU command and return the response
+        return "Hello NFC!".getBytes();
+    }
+
+    @Override
+    public void onDeactivated(int reason) {
+        // Handle deactivation if necessary
+    }
+}
